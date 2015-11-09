@@ -1,0 +1,9 @@
+<h1>Hello</h1>
+<%= link_to "Clientes", clients_path, class: "btn btn-primary" %>
+
+
+<%= form_tag search_clients_path, method: "get" do %>
+    <%= text_field_tag :id_query %>
+
+    <%= submit_tag "Search Car"%>
+<% end %>

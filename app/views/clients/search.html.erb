@@ -1,0 +1,25 @@
+<% if @client %>
+  <p>
+    <strong>Name:</strong>
+    <%= @client.name %>
+  </p>
+
+  <p>
+    <strong>Code:</strong>
+    <%= @client.unique_repair_id %>
+  </p>
+
+  <p>
+    <strong>Model:</strong>
+    <%= @client.car_model %>
+  </p>
+
+  <p>
+    <strong>Year:</strong>
+    <%= @client.car_year %>
+  </p>
+
+  <a href="<%= @client.url %>" >Photos</a>
+<% else %>
+  <h1>Coche no encontrado</h1>
+<% end %>

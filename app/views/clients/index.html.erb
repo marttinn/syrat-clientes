@@ -1,0 +1,23 @@
+<h1>Hello, index!</h1>
+
+<%= link_to "Nuevo Cliente", new_client_path, class: "btn btn-primary" %>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Código</th>
+    <th>Modelo</th>
+    <th>Año</th>
+    <th>Url</th>
+
+  </tr>
+
+  <% @clients.each do |client| %>
+  <tr>
+    <td><%= client.name %> </td>
+    <td><%= client.unique_repair_id %> </td>
+    <td><%= client.car_model %> </td>
+    <td><%= client.car_year %> </td>
+    <td><%= client.url %> </td>
+  </tr>
+  <% end %>
+</table>
