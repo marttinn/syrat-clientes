@@ -1,9 +1,22 @@
-<h1>Hello</h1>
-<%= link_to "Clientes", clients_path, class: "btn btn-primary" %>
 
+  <div class="parallax-container" data-no-transition-cache>
+    <div class="parallax" data-no-transition-cache><%= image_tag "bmwgreenblack.jpg" %></div>
+    <div class="row container">
+      <br>
+      <h1 class="white-text">Da seguimiento a tu reparación</h1>
+      <br>
+      <br>
+      <br>
+      <%= form_tag search_clients_path, method: "get" do %>
+          <%= text_field_tag :id_query, nil, placeholder: "Ingresa tu código de reparación aquí...", class: "white-text" %>
+          <%= submit_tag "Busca tu coche", class: "btn" %>
+      <% end %>
 
-<%= form_tag search_clients_path, method: "get" do %>
-    <%= text_field_tag :id_query %>
+    </div>
+  </div>
+  <!-- <div class="section white">
 
-    <%= submit_tag "Search Car"%>
-<% end %>
+  </div> -->
+  <!-- <div class="parallax-container">
+    <div class="parallax"><%= image_tag "bmwgreen.jpg" %></div>
+  </div> -->

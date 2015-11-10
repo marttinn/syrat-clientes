@@ -5,7 +5,7 @@ class ClientsController < ApplicationController
 
   def search
     @client = Client.find_by unique_repair_id: params[:id_query]
-    
+
   end
 
   def create
@@ -28,6 +28,6 @@ class ClientsController < ApplicationController
   private
 
     def params_required
-      params.require(:client).permit(:name, :url, :car_model, :car_year)
+      params.require(:client).permit(:name, :url, :car_model, :car_year, :email, :telephone, :serial)
     end
 end

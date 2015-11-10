@@ -1,25 +1,33 @@
-<% if @client %>
-  <p>
-    <strong>Name:</strong>
-    <%= @client.name %>
-  </p>
 
-  <p>
-    <strong>Code:</strong>
-    <%= @client.unique_repair_id %>
-  </p>
 
-  <p>
-    <strong>Model:</strong>
-    <%= @client.car_model %>
-  </p>
 
-  <p>
-    <strong>Year:</strong>
-    <%= @client.car_year %>
-  </p>
+  <div class="row container">
 
-  <a href="<%= @client.url %>" >Photos</a>
-<% else %>
-  <h1>Coche no encontrado</h1>
-<% end %>
+    <% if @client %>
+      <h1>Avances del auto</h1>
+      <p>
+        <strong>Name:</strong>
+        <%= @client.name %>
+      </p>
+
+      <!-- <p>
+        <strong>Code:</strong>
+        <% @client.unique_repair_id %>
+      </p> -->
+
+      <p>
+        <strong>Model:</strong>
+        <%= @client.car_model %>
+      </p>
+
+      <p>
+        <strong>Year:</strong>
+        <%= @client.car_year %>
+      </p>
+      <%= link_to "Fotos", @client.url, class: "waves-effect btn btn-primary" %>
+    <% else %>
+      <h1>Coche no encontrado</h1>
+    <% end %>
+    <%= link_to "Regresar", root_path, class: "waves-effect btn",   data: { no_turbolink: true } %>
+
+  </div>

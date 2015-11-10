@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SyratClients</title>
+  <title>Syrat | Clientes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
+<body data-no-transition-cache>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <%= link_to "SYRAT", root_path, class: "brand-logo" %>
+          <ul class="right side-nav" id="nav-mobile" style="left: -250px;">
+            <li class="hide-on-small-only"><%= link_to "Home", root_path %></a></li>
+          </ul>
+          <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
 <%= yield %>
+  <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l4 s12">
+              <h5 class="white-text">Servicio</h5>
+              <p class="grey-text text-lighten-4">We hope you have enjoyed using Materialize! If you feel Materialize has helped you out and want to support the team, send us over a donation! Any amount would help support and continue development on this project and is greatly appreciated.</p>
+  </form>
 
+            </div>
+            <div class="col l4 s12">
+              <h5 class="white-text">Somos la empresa no. 1</h5>
+              <p class="grey-text text-lighten-4">We have a Gitter chat room set up where you can talk directly with us. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.</p>
+              <!-- <a class="btn waves-effect waves-light red lighten-3" target="_blank" href="https://gitter.im/Dogfalo/materialize">Chat</a> -->
+              <%= link_to "Clientes", clients_path, class: "btn waves-effect waves-light red lighten-3" %>
+
+            </div>
+            <div class="col l4 s12" style="overflow: hidden;">
+              <h5 class="white-text">Connect</h5>
+              <!-- <iframe src="http://ghbtns.com/github-btn.html?user=dogfalo&amp;repo=materialize&amp;type=watch&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+              <br>
+              <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="http://platform.twitter.com/widgets/follow_button.3beb63f1e7d4b547a42d79c021627bc3.en.html#_=1447105527498&amp;dnt=true&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=MaterializeCSS&amp;show_count=true&amp;show_screen_name=true&amp;size=l" style="position: static; visibility: visible; width: 294px; height: 28px;" data-screen-name="MaterializeCSS"></iframe>
+              <br>
+              <div id="___follow_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 131px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 131px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1447105527004" name="I0_1447105527004" src="https://apis.google.com/u/0/_/widget/render/follow?usegapi=1&amp;annotation=bubble&amp;height=24&amp;rel=publisher&amp;origin=http%3A%2F%2Fmaterializecss.com&amp;url=https%3A%2F%2Fplus.google.com%2F108619793845925798422&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.GtbO6aLBmgE.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCPrbE429t6-SYAeKxGLkD6FEg97_Q#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1447105527004&amp;parent=http%3A%2F%2Fmaterializecss.com&amp;pfname=&amp;rpctoken=11226548" data-gapiattached="true"></iframe></div> -->
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2015 SYRAT S.A. de C.V. Todos los derechos reservados.
+          <a class="grey-text text-lighten-4 right" href="#">Aviso de Privacidad</a>
+          </div>
+        </div>
+  </footer>
 </body>
 </html>
