@@ -47,7 +47,7 @@ class ClientsController < ApplicationController
         to client_here.email
         from 'no-reply@syrat.mx'
         subject 'Avance en tu reparación'
-        body "Buen día  #{client_here.name}! Tú código de avances es: #{client_here.unique_repair_id} \b Sigue el proceso de tu reparación aquí: https://pacific-shore-4043.herokuapp.com/clients/search?utf8=✓&id_query=#{client_here.unique_repair_id} "
+        body "Buen día  #{client_here.name}! Tú código de avances es: #{client_here.unique_repair_id} \b Sigue el proceso de tu reparación aquí: 'https://pacific-shore-4043.herokuapp.com/clients/search?utf8%3D%E2%9C%93%26id_query%3D#{client_here.unique_repair_id}' "
       end
     else
     end
