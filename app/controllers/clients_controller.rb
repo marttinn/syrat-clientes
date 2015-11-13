@@ -47,7 +47,7 @@ class ClientsController < ApplicationController
         to client_here.email
         from 'no-reply@syrat.mx'
         subject 'Avance en tu reparación'
-        body "Buen día  #{client_here.name}! Sigue el proceso de tu reparación aquí: #{client_path(client_here.id)} "
+        body "Buen día  #{client_here.name}! Sigue el proceso de tu reparación aquí: https://pacific-shore-4043.herokuapp.com/clients/#{client_here.id}/ "
       end
     else
     end
