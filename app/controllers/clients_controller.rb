@@ -40,7 +40,7 @@ class ClientsController < ApplicationController
 
   def mail
     @client = Client.find(params[:id])
-    if !client.blank?
+    if !@client.blank?
       Mail.deliver do
         to @client.email
         from 'no-reply@syrat.mx'
