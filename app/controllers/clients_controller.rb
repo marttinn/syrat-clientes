@@ -40,9 +40,11 @@ class ClientsController < ApplicationController
 
   def mail
     @client = Client.find(params[:id])
-    if !@client.blank?
+    client_here = Client.find(params[:id])
+
+    if !client_here.blank?
       Mail.deliver do
-        to "#{@client.email}"
+        to client_here.email
         from 'no-reply@syrat.mx'
         subject 'Avance en tu reparación'
         body "Buen día  #{@client.name}! Sigue el proceso de tu reparación aquí: #{clients_path(@client)} "
