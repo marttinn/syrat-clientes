@@ -39,11 +39,11 @@ class ClientsController < ApplicationController
   end
 
   def mail
-    client = Client.find(params[:id])
-    p client.email
+    @client = Client.find(params[:id])
+    p @client.email
     if !client.blank?
       Mail.deliver do
-        to client.email
+        to @client.email
         from 'no-reply@syrat.mx'
         subject 'testing send mail'
         body 'Buen día  #{@client.name}! Sigue el proceso de tu reparación aquí: '
