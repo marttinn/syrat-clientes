@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
+  get 'admin/' => 'admin#index'
+
 
   resources :clients do
     collection do
