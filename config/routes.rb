@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+
+  root 'welcome#splash'
+
+  get 'locations/' => 'welcome#locations'
+  get 'repairs/' => 'welcome#repairs'
+  get 'clients/' => 'welcome#index'
 
   get 'admin/' => 'admin#index'
-
+  get 'admin/clients' => 'clients#index'
 
   resources :clients do
     collection do

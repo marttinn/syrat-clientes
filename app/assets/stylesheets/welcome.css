@@ -16,3 +16,54 @@ td a {
 tr {
   cursor: pointer;
 }
+
+
+body{
+	background-color: #222222;
+}
+
+.nav-button{
+	font-size: 0.8em;
+}
+
+.main-video{
+	margin-bottom: 30px;
+	margin-left: 10px!important;
+  margin-top: 20px;
+}
+
+.main-video-repairs{
+	margin-top: 30px;
+}
+
+.navigation-bar{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.deal-container{
+	text-align: center;
+}
+
+
+@media screen and (min-width: 601px){
+
+	.button-full-with{
+		display: block;
+		width: 100%;
+		margin: 5px;
+		background-color: #7D7D7D !important;
+	}
+}
+
+
+@media screen and (max-width: 600px){
+	.button-full-with{
+		display: block;
+		width: 100%;
+		margin: 5px;
+		background-color: #7D7D7D !important;
+		font-size: 10px;
+		padding: 0px !important;
+	}
+}

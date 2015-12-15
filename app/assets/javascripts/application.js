@@ -17,5 +17,14 @@
 //= require materialize/extras/nouislider
 //= require_tree .
 $(document).ready(function(){
-  $('.parallax').parallax();
+  $(".button-collapse").sideNav();
+  $("#owl-demo").owlCarousel({
+
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+
+  });
 });

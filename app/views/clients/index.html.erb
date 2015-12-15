@@ -1,38 +1,46 @@
-<h1>Clientes registrados</h1>
 
-<%= link_to "Nuevo Cliente", new_client_path, class: "btn btn-primary" %>
-<table class="highlight responsive-table">
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Código</th>
-      <th>Modelo</th>
-      <th>Año</th>
-      <th>Url</th>
-      <th>Email</th>
-      <th>Telephone</th>
-    </tr>
-  </thead>
+	   <div class="col s12 m8 l8 main-video"><h1>Clientes registrados</h1>
 
-  <% @clients.each do |client| %>
-    <tr>
-      <td>
-        <a href="<%= client_path(client.id) %>">
-        <%= client.name %>
-        </a>
-      </td>
-      <td>
-        <a href="<%= client_path(client.id) %>">
-        <%= client.unique_repair_id %>
-      </a>
-      </td>
-      <td><%= client.car_model %> </td>
-      <td><%= client.car_year %> </td>
-      <td><%= client.url %> </td>
-      <td><%= client.email %> </td>
-      <td><%= client.telephone %> </td>
+       <%= link_to "Nuevo Cliente", new_client_path, class: "btn btn-primary" %>
+        <table class="highlight responsive-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Código</th>
+              <th>Modelo</th>
+              <th>Año</th>
+              <th>Url</th>
+              <th>Email</th>
+              <th>Telephone</th>
+            </tr>
+          </thead>
 
-    </tr>
+          <% @clients.each do |client| %>
+            <tr>
+              <td>
+                <a href="<%= client_path(client.id) %>">
+                <%= client.name %>
+                </a>
+              </td>
+              <td>
+                <div style="width: 350px; overflow: hidden;" >
+                  <a href="<%= client_path(client.id) %>">
+                  <%= client.unique_repair_id %>
+                  </a>
+                </div>
+              </td>
+              <td><%= client.car_model %> </td>
+              <td><%= client.car_year %> </td>
+              <td>
+                <div style="width: 250px; overflow: hidden;" >
+                  <%= client.url %>
+                </div>
+              </td>
+              <td><%= client.email %> </td>
+              <td><%= client.telephone %> </td>
 
-  <% end %>
-</table>
+            </tr>
+
+          <% end %>
+        </table>
+      </div>

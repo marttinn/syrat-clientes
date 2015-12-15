@@ -24,7 +24,7 @@
         <strong>Year:</strong>
         <%= @client.car_year %>
       </p>
-      <%= link_to "Fotos", @client.url, class: "waves-effect btn btn-primary" %>
+      <%= link_to "Fotos", @client.url, class: "waves-effect btn btn-primary", target: "_blank" %>
     <% else %>
       <h1>Coche no encontrado</h1>
     <% end %>

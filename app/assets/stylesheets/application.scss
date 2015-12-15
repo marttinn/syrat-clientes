@@ -12,10 +12,69 @@
  *
  *= require_tree .
  *= require_self
+ *= require material_icons
  */
  @import "materialize/components/color";
  $primary-color: color("blue", "lighten-2") !default;
  @import 'materialize';
  @import "materialize/extras/nouislider";
 
- 
+.container{
+  width: 83%!important;
+}
+
+body{
+  color: white;
+}
+
+nav.top_nav{
+  height: 122px;
+  box-shadow: none;
+}
+.container .row {
+    margin-left: 0rem!important;
+    margin-right: -0.75rem;
+}
+
+a.button-collapse.top-nav {
+    position: absolute;
+    text-align: center;
+    height: 48px;
+    width: 48px;
+    left: 7.5%;
+    top: 0;
+    float: none;
+    margin-left: 1.5rem;
+    color: #fff;
+    font-size: 32px;
+    z-index: 2;
+}
+
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media #{$small-and-down} {
+  // styles for small screens and down
+
+}
+@media #{$medium-and-up} {
+  // styles for medium screens and larger
+  header, main, footer {
+    padding-left: 240px;
+  }
+}
+@media #{$medium-and-down} {
+  // styles for medium screens and down
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+@media #{$large-and-up} {
+  // styles for large screens and up
+}
