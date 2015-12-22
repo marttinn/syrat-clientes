@@ -16,9 +16,7 @@
         <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only" style="margin-top: 8px;"><i class="mdi-navigation-menu"></i></a></div>
         <ul id="nav-mobile" class="side-nav fixed grey darken-2 white-text" style="width: 240px;">
           <li class="logo" style="margin-top: 20px; padding-top: 10px;">
-            <a id="logo-container" href="" class="brand-logo white-text">
-              <%= image_tag  "logo2.png", height: "45" %>
-            </a>
+            <%= link_to image_tag("logo2.png", height: "45"), root_path, {:class => 'brand-logo white-text'} %>
           </li>
           <!-- <li class="search">
             <div class="search-wrapper card">
@@ -26,14 +24,11 @@
               <div class="search-results"></div>
             </div>
           </li> -->
-
+          <li class="bold"><%= link_to "Clientes", clients_path, class: "waves-effect waves-teal white-text" %></li>
+          <li class="bold"><%= link_to "Nosotros", "#", class: "waves-effect waves-teal white-text" %></li>
           <li class="bold"><%= link_to "Ubicaciones", locations_path, class: "waves-effect waves-teal white-text" %></li>
-          <li class="bold"><%= link_to "Productos", "#", class: "waves-effect waves-teal white-text" %></li>
-          <li class="bold"><%= link_to "Tecnología", "#", class: "waves-effect waves-teal white-text" %></li>
           <li class="bold"><%= link_to "Reparaciones Recientes", repairs_path, class: "waves-effect waves-teal white-text" %></li>
-          <li class="bold"><%= link_to "Seguimiento", clients_path, class: "waves-effect waves-teal white-text" %></li>
-          <li class="bold"><%= link_to "Clientes", "#", class: "waves-effect waves-teal white-text" %></li>
-          <li class="bold"><%= link_to "Iniciar Sesión", "#", class: "waves-effect waves-teal white-text" %></li>
+          <!-- <li class="bold"><%= link_to "Iniciar Sesión", "#", class: "waves-effect waves-teal white-text" %></li> -->
         </ul>
     </header>
 

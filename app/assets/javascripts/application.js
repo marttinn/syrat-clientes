@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
@@ -22,9 +23,9 @@ $(document).ready(function(){
 
       autoPlay: 3000, //Set AutoPlay to 3 seconds
 
-      items : 4,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3]
+      items : 2,
+      autoHeight : true
+
 
   });
 });

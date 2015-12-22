@@ -57,8 +57,10 @@ a.button-collapse.top-nav {
   display: block;
   width: 100%;
   height: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
-
 @media #{$small-and-down} {
   // styles for small screens and down
 

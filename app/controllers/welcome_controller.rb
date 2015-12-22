@@ -12,4 +12,8 @@ class WelcomeController < ApplicationController
   def splash
   end
 
+  def slider
+    render :layout => 'slider'
+  end
+
 end

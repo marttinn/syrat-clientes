@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'locations/' => 'welcome#locations'
   get 'repairs/' => 'welcome#repairs'
   get 'clients/' => 'welcome#index'
+  get 'slider/' => 'welcome#slider'
 
   get 'admin/' => 'admin#index'
   get 'admin/clients' => 'clients#index'
