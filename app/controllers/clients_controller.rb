@@ -17,7 +17,7 @@ class ClientsController < ApplicationController
   end
 
   def search
-    @client = Client.find_by unique_repair_id: params[:id_query]
+    @client = Client.find_by folio: params[:id_query]
 
   end
 
@@ -47,7 +47,7 @@ class ClientsController < ApplicationController
         to client_here.email
         from 'no-reply@syrat.mx'
         subject 'Avance en tu reparación'
-        body "Buen día  #{client_here.name}! Tú código de avances es: #{client_here.unique_repair_id} \b Sigue el proceso de tu reparación aquí: https://pacific-shore-4043.herokuapp.com/clients/search?id_query=#{client_here.unique_repair_id} "
+        body "Buen día  #{client_here.name}! Tú código de avances es: #{client_here.folio} \b Sigue el proceso de tu reparación aquí: https://pacific-shore-4043.herokuapp.com/clients/search?id_query=#{client_here.unique_repair_id} "
       end
     else
     end
